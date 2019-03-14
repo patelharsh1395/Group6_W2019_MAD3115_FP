@@ -243,4 +243,31 @@ class Customer : User
         
         
     }
+    
+    static func customerSingleToneObj()
+    {
+        
+        do
+        {
+        try Customer.register(customerName: "Devang", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru1@gmail.com", password: "11380Hp@30")
+        try Customer.register(customerName: "Rohan", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru2@gmail.com", password: "11380Hp@30")
+         
+            
+         //Admin
+        try Administrator.register(adminName: "Guru", userId: "guru@gmail.com", password: "11380Hp@30")
+        var ad = try Administrator.login(userid: "guru@gmail.com" , pass: "11380Hp@30")
+            
+        try ad.add_item(item_name: "CPU", price: 300)
+        try ad.add_item(item_name: "hardisk", price: 70)
+        try ad.add_item(item_name: "CPU", price: 400)
+        try ad.add_item(item_name: "EthernetCable", price: 30)
+        try ad.add_item(item_name: "Mouse", price: 30)
+            
+        }
+        catch
+        {
+            
+        }
+        
+    }
 }
