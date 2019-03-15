@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="698" y="104"/>
         </scene>
-        <!--Products Page-->
+        <!--products-->
         <scene sceneID="FHR-ei-edN">
             <objects>
                 <viewController id="iFK-z8-rAw" customClass="productsPage" customModule="Group6_W2019_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,8 +127,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZmZ-Em-xjV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7mn-zB-NPe"/>
+                    <navigationItem key="navigationItem" title="products" id="7mn-zB-NPe"/>
                     <connections>
+                        <outlet property="NavigationBar" destination="7mn-zB-NPe" id="oKJ-rT-lPi"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="productsTologin" id="GyW-dd-fEM"/>
                     </connections>
                 </viewController>

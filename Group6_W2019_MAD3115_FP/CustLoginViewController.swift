@@ -10,6 +10,8 @@ import UIKit
 
 class CustLoginViewController: UIViewController {
 
+    
+    var alert : UIAlertController?
     @IBOutlet weak var CustUserId: UITextField!
     @IBOutlet weak var CustPass: UITextField!
 
@@ -25,13 +27,25 @@ class CustLoginViewController: UIViewController {
         do
         {
             
-       // userdef.set(try Customer.login(userid: CustUserId.text!, pass: CustPass.text!), forKey: "customer")
-        self.performSegue(withIdentifier: "toproducts", sender: nil)
+            if let _ = try Customer.login(userid: CustUserId.text!, pass: CustPass.text!) ?? nil
+            {
+                UserDefaults().set(CustUserId.text, forKey: "customer")
+                self.performSegue(withIdentifier: "toproducts", sender: nil)
+            }
+            
+       
+        }
+        catch CustomError.INVALID(let text)
+        {
+            alert = UIAlertController(title: "INVALID" , message: text, preferredStyle: .alert)
+            alert?.addAction(UIAlertAction(title: "TryAgain" , style: .default , handler: nil))
+             self.present(alert!, animated: true)
         }
         catch
         {
             print("invalid pass")
         }
+        
         
     }
     
