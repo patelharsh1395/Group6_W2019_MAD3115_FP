@@ -50,6 +50,8 @@ class CustLoginViewController: UIViewController {
     }
     
     @IBAction func signUpClick(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "ToSignup", sender: nil)
     }
     
 }
