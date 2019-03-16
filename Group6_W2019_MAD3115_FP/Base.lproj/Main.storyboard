@@ -78,8 +78,8 @@
                     <connections>
                         <outlet property="CustPass" destination="GMx-1x-qAx" id="0e1-LM-svD"/>
                         <outlet property="CustUserId" destination="aqK-Qa-LMO" id="I1W-Wm-l7r"/>
-                        <segue destination="iFK-z8-rAw" kind="show" identifier="toproducts" id="5HF-jJ-tHR"/>
                         <segue destination="jjE-La-jYR" kind="show" identifier="ToSignup" id="7V7-vx-wy5"/>
+                        <segue destination="LuJ-yr-foU" kind="show" id="x0F-N4-eMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,71 +110,6 @@
             </objects>
             <point key="canvasLocation" x="2559" y="-755"/>
         </scene>
-        <!--products-->
-        <scene sceneID="FHR-ei-edN">
-            <objects>
-                <viewController id="iFK-z8-rAw" customClass="productsPage" customModule="Group6_W2019_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dxL-p5-DJU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="page 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EB-5G-94O">
-                                <rect key="frame" x="167" y="284" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJw-bq-Ew7">
-                                <rect key="frame" x="164" y="398" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="btnNavigaton:" destination="iFK-z8-rAw" eventType="touchUpInside" id="JPh-IE-jVP"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ZmZ-Em-xjV"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="products" id="7mn-zB-NPe"/>
-                    <connections>
-                        <outlet property="NavigationBar" destination="7mn-zB-NPe" id="oKJ-rT-lPi"/>
-                        <segue destination="ZbV-ZH-ZUV" kind="show" identifier="toThird" id="jat-12-ZSH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HeB-8n-4GJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3524" y="103.89805097451276"/>
-        </scene>
-        <!--Third View Controller-->
-        <scene sceneID="apQ-wu-0kU">
-            <objects>
-                <viewController id="ZbV-ZH-ZUV" customClass="ThirdViewController" customModule="Group6_W2019_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IYH-cL-yFv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2R-bE-lYD">
-                                <rect key="frame" x="261" y="70" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logoutBtn:" destination="ZbV-ZH-ZUV" eventType="touchUpInside" id="cSB-Wt-qDF"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="v7E-Hx-kzX"/>
-                    </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="thirdLogout" id="5wS-9R-zjE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bbm-en-YwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4304.8000000000002" y="103.89805097451276"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sEK-AW-5Bt">
             <objects>
@@ -193,8 +128,84 @@
             </objects>
             <point key="canvasLocation" x="696.79999999999995" y="103.89805097451276"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Fbf-s7-qgO">
+            <objects>
+                <viewController id="P9I-pu-DcY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSr-wh-sgG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rDe-tV-PL1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-shop-50" id="re7-Vk-zc0">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-9"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOQ-bw-bqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3542" y="157"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HcG-9X-7MQ">
+            <objects>
+                <viewController id="6RP-0t-YXc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ygW-a5-fuB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Prn-vx-yxc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-client-management-50" id="pMX-dh-vnF">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-16"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xlt-wi-HYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3542" y="-519"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9ss-7l-lxC">
+            <objects>
+                <viewController id="3Bu-ik-aN2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MFM-UH-UoD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ePy-7A-M99"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-add-shopping-cart-50" id="F88-mP-KU2">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-12"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McR-cr-7NZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3542" y="888"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="40n-CY-4Za">
+            <objects>
+                <tabBarController id="LuJ-yr-foU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eyv-uk-E2C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6RP-0t-YXc" kind="relationship" relationship="viewControllers" id="o6T-sf-OrR"/>
+                        <segue destination="P9I-pu-DcY" kind="relationship" relationship="viewControllers" id="oDH-t8-uwl"/>
+                        <segue destination="3Bu-ik-aN2" kind="relationship" relationship="viewControllers" id="Srh-U1-T8D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5B-hr-TJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="60"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="5wS-9R-zjE"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="icons8-add-shopping-cart-50" width="37.5" height="37.5"/>
+        <image name="icons8-client-management-50" width="37.5" height="37.5"/>
+        <image name="icons8-shop-50" width="37.5" height="37.5"/>
+    </resources>
 </document>
