@@ -30,7 +30,7 @@ class CustLoginViewController: UIViewController {
             if let _ = try Customer.login(userid: CustUserId.text!, pass: CustPass.text!) ?? nil
             {
                 UserDefaults().set(CustUserId.text, forKey: "customer")
-                self.performSegue(withIdentifier: "toproducts", sender: nil)
+                self.performSegue(withIdentifier: "tabbarcont", sender: nil)
             }
             
        

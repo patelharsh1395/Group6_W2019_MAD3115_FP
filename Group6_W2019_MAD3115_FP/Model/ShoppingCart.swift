@@ -49,11 +49,25 @@ class ShoppingCart
                     return $0.key.lowercased() == item_forCart.lowercased()
                 }))
                 {
+                    if(quantity > 0)
+                    {
                     self.items[item_forCart] = self.items[item_forCart]! + quantity
+                    }
+                    else
+                    {
+                        throw CustomError.EMPTY("quantity should be more then zero")
+                    }
                 }
                 else
                 {
+                    if(quantity > 0)
+                    {
                     self.items.updateValue(quantity, forKey: item_forCart)
+                    }
+                    else
+                    {
+                        throw CustomError.EMPTY("quantity should be more then zero")
+                    }
                 }
             }
             else
@@ -70,7 +84,14 @@ class ShoppingCart
             }) )
             {
                 //     print("inside else")
-                self.items.updateValue(quantity, forKey: item_forCart)
+                if(quantity > 0)
+                {
+                    self.items.updateValue(quantity, forKey: item_forCart)
+                }
+                else
+                {
+                    throw CustomError.EMPTY("quantity should be more then zero")
+                }
             }
             else
             {
