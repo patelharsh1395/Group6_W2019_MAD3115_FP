@@ -138,7 +138,7 @@ class Customer : User
         }
         else
         {
-            throw CustomError.INVALID("UserID and password are invalid")
+            throw CustomError.INVALID("UserID and password is invalid")
         }
         return cust
     }

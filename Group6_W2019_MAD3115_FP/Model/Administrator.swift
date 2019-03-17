@@ -17,7 +17,18 @@ struct Items {
     
     
     
-    
+    static var read_items_arr : [(String,Float)]
+    {
+        get
+        {
+            var temp : [(String,Float)] = []
+            for i in Items.items
+            {
+                temp.append((i.key,i.value))
+            }
+            return temp
+        }
+    }
     static var read_items : [String:Float]
     {
         get

@@ -8,28 +8,38 @@
 
 import UIKit
 
-class productsPage: UIViewController {
+class productsPage: UIViewController , UITableViewDataSource , UITableViewDelegate{
+    
+    
 
-    
-   // var custSession : Customer? = UserDefaults.standard.string(forKey: "customer") as! Customer
-    
-    
-    @IBAction func logoutBtn(_ sender: UIButton) {
-        
-      //  custSession = nil
-        self.performSegue(withIdentifier: "productsTologin", sender: nil)
-        
-        
-        
-    }
+    @IBOutlet weak var tableView: UITableView!
+    var custSession : String? = UserDefaults.standard.string(forKey: "customer")!
+    var items = Items.read_items_arr
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  self.title = self.custSession?.customerName
         
-        
+     
     }
     
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : CustomCell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! CustomCell
+        
+        cell.itemNAME.text  = self.items[indexPath.row].0
+        cell.itemMFG.text = ""
+        cell.itemPrice.text = "\(self.items[indexPath.row].1)"
+        cell.itemIMG.image = UIImage(named: "\(self.items[indexPath.row].0)")
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toRandom", sender: indexPath)
+    }
 
 }
