@@ -18,12 +18,15 @@ class CustLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Customer.customerSingleToneObj()
+        UserDefaults().removeObject(forKey: "customer")
+        print("this is first page")
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func signInClick(_ sender: UIButton) {
           //  let userdef = UserDefaults.standard
+        self.navigationItem.backBarButtonItem?.title = "logout"
         do
         {
             
@@ -50,7 +53,7 @@ class CustLoginViewController: UIViewController {
     }
     
     @IBAction func signUpClick(_ sender: UIButton) {
-        
+        self.navigationItem.backBarButtonItem?.title = "Back"
         self.performSegue(withIdentifier: "ToSignup", sender: nil)
     }
     

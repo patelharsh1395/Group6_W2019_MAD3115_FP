@@ -78,8 +78,8 @@
                     <connections>
                         <outlet property="CustPass" destination="GMx-1x-qAx" id="0e1-LM-svD"/>
                         <outlet property="CustUserId" destination="aqK-Qa-LMO" id="I1W-Wm-l7r"/>
-                        <segue destination="jjE-La-jYR" kind="show" identifier="ToSignup" id="7V7-vx-wy5"/>
                         <segue destination="LuJ-yr-foU" kind="show" identifier="tabbarcont" id="x0F-N4-eMF"/>
+                        <segue destination="jjE-La-jYR" kind="show" identifier="ToSignup" id="IAd-5U-225"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -93,22 +93,13 @@
                     <view key="view" contentMode="scaleToFill" id="RF4-b1-gkh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGb-qa-H8S">
-                                <rect key="frame" x="0.0" y="38" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" leftItemsSupplementBackButton="YES" id="1Zp-JO-LJb"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aCW-5l-2cY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wM4-pA-WWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2559" y="-755"/>
+            <point key="canvasLocation" x="2532" y="-986"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sEK-AW-5Bt">
@@ -137,11 +128,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-2c-hKE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="564"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="151" id="18V-ha-vg3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="151" id="18V-ha-vg3" customClass="CustomCell" customModule="Group6_W2019_MAD3115_FP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="151"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="18V-ha-vg3" id="9rh-zL-WxY">
@@ -166,7 +157,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekl-lS-Xyv">
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekl-lS-Xyv">
                                                     <rect key="frame" x="139" y="104" width="115" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.078403550921790743" green="0.66004611620347764" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -175,6 +166,10 @@
                                                         <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="viewDetails:" destination="P9I-pu-DcY" eventType="touchUpInside" id="9ID-Wf-hct"/>
+                                                        <action selector="viewdetailsBTN:" destination="18V-ha-vg3" eventType="touchUpInside" id="WBB-bu-LEj"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manufacturer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK5-VV-FOf">
                                                     <rect key="frame" x="139" y="70" width="221" height="21"/>
@@ -183,27 +178,57 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xp-80-Zc5" userLabel="included">
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-buying-filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="9xp-80-Zc5" userLabel="included">
                                                     <rect key="frame" x="323" y="104" width="37" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="includedIMG" destination="9xp-80-Zc5" id="nSX-3n-hMG"/>
+                                            <outlet property="itemIMG" destination="N3d-Xu-MKV" id="1tg-Al-Vbd"/>
+                                            <outlet property="itemMFG" destination="yK5-VV-FOf" id="wOc-GE-boh"/>
+                                            <outlet property="itemNAME" destination="aqv-b0-gAk" id="aFA-3H-lqQ"/>
+                                            <outlet property="itemPrice" destination="2vz-Ds-cim" id="udL-eb-PgA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="P9I-pu-DcY" id="rCU-8t-Zzm"/>
+                                    <outlet property="delegate" destination="P9I-pu-DcY" id="pQ1-jf-TJI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rDe-tV-PL1"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="" image="icons8-shop-50" id="re7-Vk-zc0">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-16"/>
+                        <inset key="imageInsets" minX="4" minY="0.0" maxX="0.0" maxY="-16"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="AHD-2c-hKE" id="dt7-II-HBJ"/>
+                        <segue destination="K50-qc-Y8H" kind="show" identifier="toRandom" id="guE-oK-3KH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOQ-bw-bqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3541.5999999999999" y="156.97151424287858"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xfe-sU-UgZ">
+            <objects>
+                <viewController id="K50-qc-Y8H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oWp-XY-PkZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ueD-lz-62j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0SH-rT-Slj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4277" y="154"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HcG-9X-7MQ">
@@ -216,7 +241,7 @@
                         <viewLayoutGuide key="safeArea" id="Prn-vx-yxc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icons8-client-management-50" id="pMX-dh-vnF">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
+                        <inset key="imageInsets" minX="4" minY="0.0" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlt-wi-HYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -234,14 +259,14 @@
                         <viewLayoutGuide key="safeArea" id="ePy-7A-M99"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="" image="icons8-add-shopping-cart-50" id="F88-mP-KU2">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
+                        <inset key="imageInsets" minX="4" minY="0.0" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McR-cr-7NZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3542" y="888"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="r5h-PB-Xm0">
             <objects>
                 <viewController id="mcu-uN-khY" sceneMemberID="viewController">
@@ -251,8 +276,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="c3k-Wt-y4d"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="icons8-insert-table-50" id="qd6-Od-vlQ">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-insert-table-50" id="qd6-Od-vlQ">
+                        <inset key="imageInsets" minX="4" minY="0.0" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5O-hU-IAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -282,6 +307,7 @@
     </scenes>
     <resources>
         <image name="icons8-add-shopping-cart-50" width="37.5" height="37.5"/>
+        <image name="icons8-buying-filled-50" width="37.5" height="37.5"/>
         <image name="icons8-client-management-50" width="37.5" height="37.5"/>
         <image name="icons8-insert-table-50" width="37.5" height="37.5"/>
         <image name="icons8-shop-50" width="37.5" height="37.5"/>

@@ -1,24 +1,21 @@
 //
-//  ThirdViewController.swift
+//  randomViewController.swift
 //  Group6_W2019_MAD3115_FP
 //
-//  Created by Harsh on 2019-03-15.
+//  Created by Harsh on 2019-03-16.
 //  Copyright © 2019 com. All rights reserved.
 //
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class randomViewController: UIViewController {
 
-    @IBAction func logoutBtn(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "thirdLogout", sender: nil)
-        
-        
-    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print()
     }
     
 
