@@ -21,6 +21,18 @@ class ShoppingCart
             return items
         }
     }
+    var readItemsFromCartArr : [(String,Float)]!
+    {
+        get
+        {
+            var temp : [(String,Float)] = []
+            for i in items
+            {
+                temp.append((i.key,i.value))
+            }
+            return temp
+        }
+    }
     private var checkout_counter : Bool = false
     var readonly_checkout : Bool
     {
@@ -131,6 +143,7 @@ class ShoppingCart
         {
             if(item_forCart.lowercased() == item.lowercased())
             {
+                print("inside remove method ")
                 items.removeValue(forKey: item_forCart)
                 return "\(item_forCart) successfully removed"
             }

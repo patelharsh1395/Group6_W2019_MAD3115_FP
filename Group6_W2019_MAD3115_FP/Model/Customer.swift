@@ -249,7 +249,7 @@ class Customer : User
         
         do
         {
-        try Customer.register(customerName: "Devang", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru1@gmail.com", password: "11380Hp@30")
+              try Customer.register(customerName: "Devang", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru1@gmail.com", password: "11380Hp@30")
         try Customer.register(customerName: "Rohan", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru2@gmail.com", password: "11380Hp@30")
          
             
@@ -263,6 +263,10 @@ class Customer : User
         try ad.add_item(item_name: "EthernetCable", price: 30)
         try ad.add_item(item_name: "Mouse", price: 30)
             
+            
+            var c1 : Customer = try  Customer.login(userid: "guru1@gmail.com", pass: "11380Hp@30")
+         try   c1.addItemToShoppingCart(item: "CPU", qty: 1)
+          try  c1.addItemToShoppingCart(item: "hardisk", qty: 2)
         }
         catch
         {
