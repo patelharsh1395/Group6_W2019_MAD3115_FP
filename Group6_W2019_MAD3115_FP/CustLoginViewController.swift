@@ -26,7 +26,7 @@ class CustLoginViewController: UIViewController {
 
     @IBAction func signInClick(_ sender: UIButton) {
           //  let userdef = UserDefaults.standard
-        self.navigationItem.backBarButtonItem?.title = "logout"
+        self.navigationItem.backBarButtonItem?.title = "Back"
         do
         {
             
