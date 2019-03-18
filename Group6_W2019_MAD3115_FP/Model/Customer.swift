@@ -258,15 +258,15 @@ class Customer : User
         var ad = try Administrator.login(userid: "guru@gmail.com" , pass: "11380Hp@30")
             
         try ad.add_item(item_name: "CPU", price: 300)
-        try ad.add_item(item_name: "hardisk", price: 70)
+        try ad.add_item(item_name: "harddisk", price: 70)
         try ad.add_item(item_name: "CPU", price: 400)
         try ad.add_item(item_name: "EthernetCable", price: 30)
         try ad.add_item(item_name: "Mouse", price: 30)
             
             
             var c1 : Customer = try  Customer.login(userid: "guru1@gmail.com", pass: "11380Hp@30")
-         try   c1.addItemToShoppingCart(item: "CPU", qty: 1)
-          try  c1.addItemToShoppingCart(item: "hardisk", qty: 2)
+            try c1.addItemToShoppingCart(item: "CPU", qty: 1)
+            try c1.addItemToShoppingCart(item: "hardisk", qty: 2)
         }
         catch
         {

@@ -34,6 +34,7 @@
 		A18DDD2F223EE24100473FDC /* CellsForShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DDD2E223EE24100473FDC /* CellsForShoppingCart.swift */; };
 		A18DDD31223F06E900473FDC /* ShoppingCartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DDD30223F06E900473FDC /* ShoppingCartPage.swift */; };
 		A18DDD33223F465500473FDC /* CellForTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DDD32223F465500473FDC /* CellForTotal.swift */; };
+		A1FC428322401F1000D1A035 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC428222401F1000D1A035 /* ProductDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		A18DDD2E223EE24100473FDC /* CellsForShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsForShoppingCart.swift; sourceTree = "<group>"; };
 		A18DDD30223F06E900473FDC /* ShoppingCartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartPage.swift; sourceTree = "<group>"; };
 		A18DDD32223F465500473FDC /* CellForTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForTotal.swift; sourceTree = "<group>"; };
+		A1FC428222401F1000D1A035 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				A18DDD2E223EE24100473FDC /* CellsForShoppingCart.swift */,
 				A18DDD30223F06E900473FDC /* ShoppingCartPage.swift */,
 				A18DDD32223F465500473FDC /* CellForTotal.swift */,
+				A1FC428222401F1000D1A035 /* ProductDetails.swift */,
 			);
 			path = Group6_W2019_MAD3115_FP;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				9B4D3AF322342162009AA2B7 /* Items.swift in Sources */,
 				A12738E2223DA3290061FEF6 /* CustomCell.swift in Sources */,
 				9B4D3AF02234211B009AA2B7 /* IDisplay.swift in Sources */,
+				A1FC428322401F1000D1A035 /* ProductDetails.swift in Sources */,
 				9B4D3AD922341DB9009AA2B7 /* Orders.swift in Sources */,
 				9B4D3ADB22341DEC009AA2B7 /* ShippingInfo.swift in Sources */,
 				9B4D3ADD22341E30009AA2B7 /* ShoppingCart.swift in Sources */,
