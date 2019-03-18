@@ -46,13 +46,21 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
-        
+        if(section == 0)
+        {
             return self.shoppingCart.readItemFromCart.count
         
-        
+        }
+        else
+        {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if(indexPath.section == 0)
+        {
         
             var cell2 : CellsForShoppingCart = self.tableView.dequeueReusableCell(withIdentifier: "cellForCart", for: indexPath) as! CellsForShoppingCart
             cell2.itemIMG.image = UIImage(named: "\(self.shoppingCart.readItemsFromCartArr[indexPath.row].0)")
@@ -64,20 +72,46 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
          print("Hello :",indexPath.row)
         
         return cell2
-        
+        }
+        else
+        {
+            var cell2 : CellForTotal  = self.tableView.dequeueReusableCell(withIdentifier: "cellForTotalAMT", for: indexPath) as! CellForTotal
+            var tempGrandTotal : Float = 0
+            for price in Items.read_items_arr
+            {
+                for qty in self.shoppingCart.readItemsFromCartArr
+                {
+                    if(price.0 == qty.0)
+                    {
+                        tempGrandTotal += price.1 * qty.1
+                    }
+                }
+            }
+            cell2.total.text = "Total price : \(tempGrandTotal.dollar())"
+            
+            return cell2
+        }
        
         
         
     }
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+       
+        return 2
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        
+        return 160
     }
     
    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if(indexPath.section == 0)
+        {
         return true
+        }
+        return false
     }
 //     private func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  throws {
 //        if(editingStyle == UITableViewCell.EditingStyle.delete)

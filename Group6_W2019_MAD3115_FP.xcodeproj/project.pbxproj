@@ -33,6 +33,7 @@
 		A13D785E223DC7590010F561 /* randomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D785D223DC7590010F561 /* randomViewController.swift */; };
 		A18DDD2F223EE24100473FDC /* CellsForShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DDD2E223EE24100473FDC /* CellsForShoppingCart.swift */; };
 		A18DDD31223F06E900473FDC /* ShoppingCartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DDD30223F06E900473FDC /* ShoppingCartPage.swift */; };
+		A18DDD33223F465500473FDC /* CellForTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DDD32223F465500473FDC /* CellForTotal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		A13D785D223DC7590010F561 /* randomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomViewController.swift; sourceTree = "<group>"; };
 		A18DDD2E223EE24100473FDC /* CellsForShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsForShoppingCart.swift; sourceTree = "<group>"; };
 		A18DDD30223F06E900473FDC /* ShoppingCartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartPage.swift; sourceTree = "<group>"; };
+		A18DDD32223F465500473FDC /* CellForTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForTotal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				A13D785D223DC7590010F561 /* randomViewController.swift */,
 				A18DDD2E223EE24100473FDC /* CellsForShoppingCart.swift */,
 				A18DDD30223F06E900473FDC /* ShoppingCartPage.swift */,
+				A18DDD32223F465500473FDC /* CellForTotal.swift */,
 			);
 			path = Group6_W2019_MAD3115_FP;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				9B4D3ADD22341E30009AA2B7 /* ShoppingCart.swift in Sources */,
 				9B4D3AED223420C3009AA2B7 /* ShippingType.swift in Sources */,
 				A12738DA223AEA530061FEF6 /* productsTableView.swift in Sources */,
+				A18DDD33223F465500473FDC /* CellForTotal.swift in Sources */,
 				9B4D3AEB22342094009AA2B7 /* OrderStatus.swift in Sources */,
 				9B4D3AE422341F7F009AA2B7 /* IntEXT.swift in Sources */,
 				A12738D8223AE5130061FEF6 /* CustLoginViewController.swift in Sources */,
