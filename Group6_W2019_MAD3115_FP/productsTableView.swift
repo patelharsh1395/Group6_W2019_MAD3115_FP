@@ -49,8 +49,7 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(tableView.tag == 0)
-        {
+      
             var cell : CustomCell  = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! CustomCell
             
             cell.itemNAME.text  = self.items[indexPath.row].0
@@ -59,15 +58,8 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
             cell.itemIMG.image = UIImage(named: "\(self.items[indexPath.row].0)")
             
             return cell
-        }
-        else
-        {
-            var cell2 : CellsForShoppingCart = self.tableView.dequeueReusableCell(withIdentifier: "cellForCart", for: indexPath) as! CellsForShoppingCart
-            cell2.itemIMG.image = UIImage(named: "\(self.shoppingCart.readItemsFromCartArr[indexPath.row].0)")
-            cell2.itemName.text = self.shoppingCart.readItemsFromCartArr[indexPath.row].0
-            cell2.itemPrice.text = "\(String(describing: Items.read_items[cell2.itemName.text!]))"
-            return cell2
-        }
+        
+       
     }
     
     
@@ -76,10 +68,13 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(tableView.tag == 0)
-        {
-            self.performSegue(withIdentifier: "toRandom", sender: indexPath)
-        }
+        
+            ProductDetails.itemdesc = "......"
+            ProductDetails.itemname = Items.read_items_arr[indexPath.row].0
+            ProductDetails.itemprice = "\(String(describing: Items.read_items[ProductDetails.itemname]))"
+            ProductDetails.itemimg = ProductDetails.itemname
+             self.performSegue(withIdentifier: "toProductDetails", sender: indexPath)
+        
         
         
     }

@@ -208,27 +208,94 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="AHD-2c-hKE" id="dt7-II-HBJ"/>
-                        <segue destination="K50-qc-Y8H" kind="show" identifier="toRandom" id="guE-oK-3KH"/>
+                        <segue destination="K50-qc-Y8H" kind="show" identifier="toProductDetails" id="guE-oK-3KH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOQ-bw-bqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3541.5999999999999" y="156.97151424287858"/>
         </scene>
-        <!--View Controller-->
+        <!--Product Details-->
         <scene sceneID="xfe-sU-UgZ">
             <objects>
-                <viewController id="K50-qc-Y8H" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K50-qc-Y8H" customClass="ProductDetails" customModule="Group6_W2019_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oWp-XY-PkZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uHd-b7-aFo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ItemName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7V-yo-RKh">
+                                <rect key="frame" x="16" y="246" width="335" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ff4-I5-bgU">
+                                <rect key="frame" x="10" y="318" width="355" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-Kp-oo1">
+                                <rect key="frame" x="60" y="487" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepperQty:" destination="K50-qc-Y8H" eventType="valueChanged" id="55u-C7-ZfZ"/>
+                                </connections>
+                            </stepper>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-oL-EUY">
+                                <rect key="frame" x="169" y="486" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tD-iA-o1c">
+                                <rect key="frame" x="10" y="491" width="36" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRU-jX-Ou0">
+                                <rect key="frame" x="16" y="275" width="335" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJ4-w0-dDF">
+                                <rect key="frame" x="87" y="580" width="193" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.078403550919999995" green="0.66004611619999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Add To Cart" image="icons8-addtoCart-50">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToCartBTN:" destination="K50-qc-Y8H" eventType="touchUpInside" id="ON4-s2-ilA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ProductDetails"/>
                         <viewLayoutGuide key="safeArea" id="ueD-lz-62j"/>
                     </view>
+                    <connections>
+                        <outlet property="Description" destination="ff4-I5-bgU" id="p4h-Aw-Xza"/>
+                        <outlet property="itemIMG" destination="uHd-b7-aFo" id="CPw-vP-jlw"/>
+                        <outlet property="itemName" destination="F7V-yo-RKh" id="617-DH-ptX"/>
+                        <outlet property="itemPrice" destination="sRU-jX-Ou0" id="muG-9o-huW"/>
+                        <outlet property="textQTY" destination="8rV-oL-EUY" id="Fur-Ao-LiO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0SH-rT-Slj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4277" y="154"/>
+            <point key="canvasLocation" x="4276" y="152.47376311844079"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HcG-9X-7MQ">
@@ -391,6 +458,7 @@
     </scenes>
     <resources>
         <image name="icons8-add-shopping-cart-50" width="37.5" height="37.5"/>
+        <image name="icons8-addtoCart-50" width="37.5" height="37.5"/>
         <image name="icons8-buying-filled-50" width="37.5" height="37.5"/>
         <image name="icons8-client-management-50" width="37.5" height="37.5"/>
         <image name="icons8-insert-table-50" width="37.5" height="37.5"/>
