@@ -105,6 +105,9 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
         return 160
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if(indexPath.section == 0)
