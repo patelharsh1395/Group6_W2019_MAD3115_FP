@@ -37,8 +37,12 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.reloadData()
+       
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+         self.tableView.reloadData()
     }
     
    
@@ -116,18 +120,7 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
         }
         return false
     }
-//     private func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  throws {
-//        if(editingStyle == UITableViewCell.EditingStyle.delete)
-//        {
-//            tableView.beginUpdates()
-//            try self.shoppingCart.removeItem(item: self.shoppingCart.readItemsFromCartArr[indexPath.row].0 )
-//            tableView.endUpdates()
-//            tableView.reloadData()
-//        }
-//    }
-    
-    
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  {
         do
         {
