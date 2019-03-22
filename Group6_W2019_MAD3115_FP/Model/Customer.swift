@@ -19,7 +19,7 @@ class Customer : User
     let shopping_cart = ShoppingCart.getShoppingCart()
     var orders : [Orders]!
     static var usersDictionary = [String:(String,Customer)]()
-    
+    var dob : String!
     
     
     override private init()
@@ -39,10 +39,10 @@ class Customer : User
     
     
     
-    static func register(customerName : String, address : String,  creaditCardInfo : Int , userId : String , password : String ) throws -> Bool
+    static func register(customerName : String, address : String,  creaditCardInfo : Int , userId : String , password : String , dob : String) throws -> Bool
     {
         
-        if (!userId.isEmpty && !password.isEmpty && !customerName.isEmpty && !address.isEmpty  )
+        if (!userId.isEmpty && !password.isEmpty && !customerName.isEmpty && !address.isEmpty && !dob.isEmpty  )
         {
             if(userId.isValidEmail())
             {
@@ -52,9 +52,6 @@ class Customer : User
                     
                     if(password.isValidPassword())
                     {
-                        
-                        
-                        
                         if(!creaditCardInfo.isValidCard())
                         {
                             throw CustomError.INVALID(" Invalid credit card ")
@@ -63,6 +60,7 @@ class Customer : User
                         cust.customerName = customerName
                         cust.address = address
                         cust.creaditCardInfo = creaditCardInfo
+                        cust.dob = dob
                         cust.orders = []
                         Customer.usersDictionary.updateValue((password,cust), forKey: userId)
                         
@@ -94,6 +92,7 @@ class Customer : User
                             cust.customerName = customerName
                             cust.address = address
                             cust.creaditCardInfo = creaditCardInfo
+                            cust.dob = dob
                             cust.orders = []
                             Customer.usersDictionary.updateValue((password,cust), forKey: userId)
                             
@@ -108,7 +107,7 @@ class Customer : User
             }
             else
             {
-                throw CustomError.INVALID("UserId is in invalid format")
+                throw CustomError.INVALID("Email is in invalid format")
             }
             
         }
@@ -249,8 +248,8 @@ class Customer : User
         
         do
         {
-              try Customer.register(customerName: "Devang", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru1@gmail.com", password: "11380Hp@30")
-        try Customer.register(customerName: "Rohan", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru2@gmail.com", password: "11380Hp@30")
+              try Customer.register(customerName: "Devang", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru1@gmail.com", password: "11380Hp@30", dob: "1/mar/1995")
+            try Customer.register(customerName: "Rohan", address: "11321431", creaditCardInfo: 1234567890123456, userId: "guru2@gmail.com", password: "11380Hp@30" , dob : "1/mar/1995")
          
             
          //Admin

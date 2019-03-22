@@ -146,6 +146,7 @@ class ShoppingCart
                 print("inside remove method ")
                 items.removeValue(forKey: item_forCart)
                 return "\(item_forCart) successfully removed"
+                
             }
         }
         throw CustomError.ALREADY_EXIST(" \(item) does not exist")

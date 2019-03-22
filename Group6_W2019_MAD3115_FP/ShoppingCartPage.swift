@@ -125,7 +125,9 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
 //            tableView.reloadData()
 //        }
 //    }
-
+    
+    
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  {
         do
         {
