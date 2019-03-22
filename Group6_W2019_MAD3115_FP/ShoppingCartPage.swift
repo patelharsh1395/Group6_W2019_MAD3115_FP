@@ -121,7 +121,6 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
         return false
     }
 
-
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  {
         do
         {

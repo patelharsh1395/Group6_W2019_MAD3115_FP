@@ -35,6 +35,7 @@
 		A18DDD31223F06E900473FDC /* ShoppingCartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DDD30223F06E900473FDC /* ShoppingCartPage.swift */; };
 		A18DDD33223F465500473FDC /* CellForTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DDD32223F465500473FDC /* CellForTotal.swift */; };
 		A1E60B372244529800B038F5 /* SignupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E60B362244529800B038F5 /* SignupPage.swift */; };
+		A1E60B39224565F700B038F5 /* ForBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E60B38224565F700B038F5 /* ForBadges.swift */; };
 		A1FC428322401F1000D1A035 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FC428222401F1000D1A035 /* ProductDetails.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		A18DDD30223F06E900473FDC /* ShoppingCartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartPage.swift; sourceTree = "<group>"; };
 		A18DDD32223F465500473FDC /* CellForTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForTotal.swift; sourceTree = "<group>"; };
 		A1E60B362244529800B038F5 /* SignupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPage.swift; sourceTree = "<group>"; };
+		A1E60B38224565F700B038F5 /* ForBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForBadges.swift; sourceTree = "<group>"; };
 		A1FC428222401F1000D1A035 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				9B4D3AEF2234211B009AA2B7 /* IDisplay.swift */,
+				A1E60B38224565F700B038F5 /* ForBadges.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				9B4D3AA622341BE4009AA2B7 /* AppDelegate.swift in Sources */,
 				9B4D3AE222341F40009AA2B7 /* FloatEXT.swift in Sources */,
 				9B4D3AE622341FE3009AA2B7 /* StringEXT.swift in Sources */,
+				A1E60B39224565F700B038F5 /* ForBadges.swift in Sources */,
 				9B4D3AE922342042009AA2B7 /* CustomError.swift in Sources */,
 				A13D785E223DC7590010F561 /* randomViewController.swift in Sources */,
 				9B4D3AD722341D7B009AA2B7 /* Customer.swift in Sources */,
