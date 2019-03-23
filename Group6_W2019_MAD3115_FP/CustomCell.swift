@@ -17,10 +17,7 @@ class CustomCell: UITableViewCell {
     
     @IBOutlet weak var itemMFG: UILabel!
     
-    @IBAction func viewdetailsBTN(_ sender: UIButton) throws  {
-        
-        print("view details", self.itemNAME)
-    }
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()

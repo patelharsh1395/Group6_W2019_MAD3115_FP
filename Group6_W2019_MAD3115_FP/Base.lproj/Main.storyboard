@@ -320,20 +320,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekl-lS-Xyv">
-                                                    <rect key="frame" x="139" y="104" width="115" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.078403550921790743" green="0.66004611620347764" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="View Details">
-                                                        <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="viewDetails:" destination="P9I-pu-DcY" eventType="touchUpInside" id="9ID-Wf-hct"/>
-                                                        <action selector="viewdetailsBTN:" destination="18V-ha-vg3" eventType="touchUpInside" id="WBB-bu-LEj"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manufacturer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK5-VV-FOf">
                                                     <rect key="frame" x="139" y="70" width="221" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -600,10 +586,10 @@
             </objects>
             <point key="canvasLocation" x="3526" y="1643"/>
         </scene>
-        <!--View Controller-->
+        <!--About Us-->
         <scene sceneID="wpo-Hj-R07">
             <objects>
-                <viewController id="yUQ-jp-qD2" sceneMemberID="viewController">
+                <viewController id="yUQ-jp-qD2" customClass="AboutUs" customModule="Group6_W2019_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gie-my-SA3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -624,6 +610,9 @@
                     <tabBarItem key="tabBarItem" title="" image="icons8-about-50" id="ZNd-HC-Oda">
                         <inset key="imageInsets" minX="4" minY="0.0" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="webView" destination="wTy-dY-Df6" id="7kD-ed-xYI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T9-mE-dEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
