@@ -164,6 +164,33 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
     }
    
     
-
-
+    @IBAction func checkOutBtn(_ sender: UIButton) {
+       
+        
+            
+        do
+        {
+          try self.cust.checkout()
+            self.tableView.reloadData()
+        }
+        catch CustomError.EMPTY(let p)
+        {
+           self.showAlert(title: "Empty Cart", message: p)
+        }
+        catch
+        {
+            print("\(error)")
+        }
+        
+    }
+    
+    func showAlert(title: String, message: String) {
+        // Create alert controller.
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert);
+        var alertAction : UIAlertAction? = nil
+        alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil )
+        
+        self.present(alertController, animated:  true)
+        
+    }
 }

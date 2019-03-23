@@ -33,6 +33,8 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
     var items = Items.read_items_arr
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.logout()
+        self.hideBack()
         
     }
     
@@ -106,8 +108,19 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
         
     }
    
-        
-        
+    func hideBack()
+    {
+        self.navigationItem.hidesBackButton = true
+        let buttonLogout = UIBarButtonItem(title:"Logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(productsTableView.logout))
+       
+        self.navigationItem.rightBarButtonItem = buttonLogout
     }
+
+    @objc func logout()
+    {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+}
 
 
