@@ -43,6 +43,20 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
          self.tableView.reloadData()
+            if let item = self.tabBarController?.tabBar.items
+            {
+                    let temp = item[2]
+                    if( self.shoppingCart.readItemFromCart.count != 0 )
+                    {
+                            temp.badgeValue = "\(self.shoppingCart.readItemFromCart.count)"
+                    }
+                    else
+                    {
+                            temp.badgeValue = nil
+                    }
+            }
+        
+        
     }
     
    
@@ -109,9 +123,7 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
         return 160
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-       self.tableView.reloadData()
-    }
+   
    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if(indexPath.section == 0)
@@ -136,6 +148,10 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
                         if(self.shoppingCart.readItemFromCart.count != 0)
                         {
                             temp.badgeValue = "\(self.shoppingCart.readItemFromCart.count)"
+                        }
+                        else
+                        {
+                            temp.badgeValue = nil
                         }
                     }
                      tableView.reloadData()

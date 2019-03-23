@@ -75,6 +75,10 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
             {
                 temp.badgeValue = "\(self.shoppingCart.readItemFromCart.count)"
             }
+            else
+            {
+                 temp.badgeValue = nil
+            }
         }
         
         
@@ -92,5 +96,9 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
         
         
     }
+   
+        
+        
+    }
 
-}
+

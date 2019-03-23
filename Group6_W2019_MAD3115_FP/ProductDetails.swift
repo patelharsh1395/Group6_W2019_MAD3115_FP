@@ -60,7 +60,7 @@ class ProductDetails: UIViewController {
         {
                 try  self.shoppingCart.addCartItem(item_forCart: ProductDetails.itemname , quantity: tempqty)
             
-            print("inside block of do")
+                print("inside block of do")
             
         }
         catch
@@ -73,9 +73,9 @@ class ProductDetails: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         itemIMG.image = UIImage(named: ProductDetails.itemimg)
-        itemName.text = ProductDetails.itemname
-        Description.text = ProductDetails.itemdesc
-        itemPrice.text = ProductDetails.itemprice
+        itemName.text = ProductDetails.itemname!
+        Description.text = ProductDetails.itemdesc!
+        itemPrice.text = ProductDetails.itemprice!
         self.textQTY.text = "1"
     }
     

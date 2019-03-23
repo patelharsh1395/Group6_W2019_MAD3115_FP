@@ -30,20 +30,15 @@ extension String
     }
     func nilOrWhiteSpace() -> Bool
     {
-        if(self != nil)
-        {
+        
           if(  self.trimmingCharacters(in: .whitespacesAndNewlines) == "")
           {
             return false
             }
             
             return true
-        }
-        else
-        {
-            return false
-        }
-            
+    
+       
         
     }
     
