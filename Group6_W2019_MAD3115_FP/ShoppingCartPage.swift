@@ -170,8 +170,11 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
             
         do
         {
-          try self.cust.checkout()
-            self.tableView.reloadData()
+            try self.cust.checkout()
+            try self.cust.placeOrder(shippingType: .EXPRESS , shippingRegionId: "m12323" )
+           
+            self.showAlert(title: "Checkout", message: "order is in process")
+            self.viewDidAppear(true)
         }
         catch CustomError.EMPTY(let p)
         {
@@ -189,7 +192,7 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert);
         var alertAction : UIAlertAction? = nil
         alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil )
-        
+        alertController.addAction(alertAction!)
         self.present(alertController, animated:  true)
         
     }

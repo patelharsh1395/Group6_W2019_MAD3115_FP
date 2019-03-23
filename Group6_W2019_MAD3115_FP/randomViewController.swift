@@ -11,7 +11,7 @@ import UIKit
 class randomViewController: UIViewController {
 
     
-    
+     var custSession : String? = UserDefaults.standard.string(forKey: "customer")!
     override func viewDidLoad() {
         super.viewDidLoad()
 
