@@ -56,7 +56,16 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
             cell.itemMFG.text = ""
             cell.itemPrice.text = "\(self.items[indexPath.row].1)"
             cell.itemIMG.image = UIImage(named: "\(self.items[indexPath.row].0)")
-            
+        if(self.shoppingCart.readItemFromCart.contains(where: { (key, value) -> Bool in
+            return key == cell.itemNAME.text
+        }))
+        {
+            cell.includedIMG.isHidden = false
+        }
+        else
+        {
+            cell.includedIMG.isHidden = true
+        }
             return cell
         
        

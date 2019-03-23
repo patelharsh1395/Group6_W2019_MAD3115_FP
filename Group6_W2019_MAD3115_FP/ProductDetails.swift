@@ -61,7 +61,7 @@ class ProductDetails: UIViewController {
                 try  self.shoppingCart.addCartItem(item_forCart: ProductDetails.itemname , quantity: tempqty)
             
                 print("inside block of do")
-            
+                
         }
         catch
         {
