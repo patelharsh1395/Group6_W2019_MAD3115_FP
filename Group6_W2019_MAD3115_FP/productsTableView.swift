@@ -54,7 +54,7 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
             
             cell.itemNAME.text  = self.items[indexPath.row].0
             cell.itemMFG.text = ""
-            cell.itemPrice.text = "\(self.items[indexPath.row].1)"
+            cell.itemPrice.text = self.items[indexPath.row].1.dollar()
             cell.itemIMG.image = UIImage(named: "\(self.items[indexPath.row].0)")
         if(self.shoppingCart.readItemFromCart.contains(where: { (key, value) -> Bool in
             return key == cell.itemNAME.text
