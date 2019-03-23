@@ -106,7 +106,7 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+       self.tableView.reloadData()
     }
    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -136,8 +136,16 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
                 {
                     
                  try self.shoppingCart.removeItem(item: self.shoppingCart.readItemsFromCartArr[indexPath.row].0)
-                   tableView.reloadData()
-                    
+                  
+                    if let items = self.tabBarController?.tabBar.items
+                    {
+                        var temp = items[2]
+                        if(self.shoppingCart.readItemFromCart.count != 0)
+                        {
+                            temp.badgeValue = "\(self.shoppingCart.readItemFromCart.count)"
+                        }
+                    }
+                     tableView.reloadData()
                 }
         }
         catch
