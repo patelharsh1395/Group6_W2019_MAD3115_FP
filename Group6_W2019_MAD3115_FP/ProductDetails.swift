@@ -12,7 +12,7 @@ class ProductDetails: UIViewController {
 
     
     static var itemname : String!
-    static var itemprice : String!
+    static var itemprice : Float!
     static var itemdesc : String!
     static var itemimg : String!
     
@@ -75,7 +75,7 @@ class ProductDetails: UIViewController {
         itemIMG.image = UIImage(named: ProductDetails.itemimg)
         itemName.text = ProductDetails.itemname!
         Description.text = ProductDetails.itemdesc!
-        itemPrice.text = ProductDetails.itemprice!
+        itemPrice.text = ProductDetails.itemprice!.dollar()
         self.textQTY.text = "1"
     }
     

@@ -98,7 +98,7 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
         
             ProductDetails.itemdesc = "......"
             ProductDetails.itemname = Items.read_items_arr[indexPath.row].0
-            ProductDetails.itemprice = "\(String(describing: Items.read_items[ProductDetails.itemname]))"
+            ProductDetails.itemprice = Items.read_items[ProductDetails.itemname]
             ProductDetails.itemimg = ProductDetails.itemname
              self.performSegue(withIdentifier: "toProductDetails", sender: indexPath)
         
