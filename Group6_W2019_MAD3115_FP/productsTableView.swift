@@ -66,7 +66,21 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+        if let items = self.tabBarController?.tabBar.items
+        {
+            var temp = items[2]
+            if(self.shoppingCart.readItemFromCart.count != 0)
+            {
+                temp.badgeValue = "\(self.shoppingCart.readItemFromCart.count)"
+            }
+        }
+        
+        
+        
+        
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
             ProductDetails.itemdesc = "......"
