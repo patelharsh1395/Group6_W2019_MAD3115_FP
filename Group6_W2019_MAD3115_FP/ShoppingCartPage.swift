@@ -45,7 +45,7 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
          self.tableView.reloadData()
             if let item = self.tabBarController?.tabBar.items
             {
-                    let temp = item[2]
+                    let temp = item[1]
                     if( self.shoppingCart.readItemFromCart.count != 0 )
                     {
                             temp.badgeValue = "\(self.shoppingCart.readItemFromCart.count)"
