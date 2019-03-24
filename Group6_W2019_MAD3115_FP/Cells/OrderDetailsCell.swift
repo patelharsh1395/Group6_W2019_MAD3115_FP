@@ -18,6 +18,7 @@ class OrderDetailsCell: UITableViewCell {
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemQTY: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
+    
     @IBOutlet weak var itemSubTotal: UILabel!
     
     var custSession : String? = UserDefaults.standard.string(forKey: "customer")!

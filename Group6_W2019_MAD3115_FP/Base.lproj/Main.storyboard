@@ -644,6 +644,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="2yN-4a-UR7" id="u5u-hg-mEg"/>
+                        <segue destination="wZI-Xp-uCW" kind="show" id="tF6-ch-TVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5O-hU-IAf" userLabel="First Responder" sceneMemberID="firstResponder"/>

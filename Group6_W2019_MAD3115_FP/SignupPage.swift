@@ -43,12 +43,12 @@ class SignupPage: UIViewController {
     
     @IBAction func submitBtn(_ sender: UIButton) {
         
-        print("inside btn")
+        
         let isValidAge = validateAge(birthDate: datePicker.date);
         if (self.Name.text?.nilOrWhiteSpace() ?? false && self.creditcard.text?.nilOrWhiteSpace() ?? false && self.address.text.nilOrWhiteSpace() ?? false && self.password.text?.nilOrWhiteSpace() ?? false && self.reenter_pass.text?.nilOrWhiteSpace() ?? false && self.email.text?.nilOrWhiteSpace() ?? false )
         {
                         if isValidAge {
-                            //showAlert(title: "Valid Age", message: "You are between 18 and 100 years old");
+                           
                             do{
                                 
                                 try Customer.register(customerName: self.Name.text!, address: self.address.text! , creaditCardInfo: Int(self.creditcard.text!)!  , userId: self.email.text! , password: self.password.text!, dob:  "\(datePicker.date)" )
@@ -92,15 +92,13 @@ class SignupPage: UIViewController {
     }
     
     func showAlert(title: String, message: String) {
-        // Create alert controller.
+       
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert);
         var alertAction : UIAlertAction? = nil
                    if(title == "Success")
                    {
                             alertAction = UIAlertAction(title: "OK", style: .default) { (alert) in
-//                                let sb = UIStoryboard(name: "Main", bundle: nil)
-//                                let nv = sb.instantiateViewController(withIdentifier: "CustLoginViewController") as! CustLoginViewController
-//                                self.present(nv ,animated: true)
+
                                 
                               self.navigationController?.popViewController(animated: true)
                             }

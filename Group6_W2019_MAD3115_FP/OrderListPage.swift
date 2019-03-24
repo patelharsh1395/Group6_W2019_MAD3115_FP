@@ -36,7 +36,7 @@ class OrderListPage: UIViewController , UITableViewDelegate , UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "Orders"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,24 +70,19 @@ class OrderListPage: UIViewController , UITableViewDelegate , UITableViewDataSou
         return 200
     }
    
-//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        OrderDetailsTableTableViewController.orderId = indexPath.row
-//        print("inside .....")
-//       // self.performSegue(withIdentifier: "toOrderDetails", sender: nil)
-//        self.navigationController?.performSegue(withIdentifier: "toOrderDetails", sender: nil)
-//    }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      //  OrderDetailsTableTableViewController.orderId = indexPath.row
+      
         
         OrderDetailsTableTableViewController.order = cust.orders[indexPath.row]
-        print("inside .....")
+       
        var sb = UIStoryboard(name: "Main", bundle: nil)
         var nv = sb.instantiateViewController(withIdentifier: "OrderDetailsTableTableViewController") as! OrderDetailsTableTableViewController
         self.navigationController?.pushViewController(nv, animated: true)
     }
     override func viewDidAppear(_ animated: Bool) {
-        print("inside did appear")
+      
         self.tableView.reloadData()
     }
     

@@ -60,7 +60,7 @@ class ProductDetails: UIViewController {
         {
                 try  self.shoppingCart.addCartItem(item_forCart: ProductDetails.itemname , quantity: tempqty)
             
-                print("inside block of do")
+              
                 
         }
         catch
@@ -77,6 +77,7 @@ class ProductDetails: UIViewController {
         Description.text = ProductDetails.itemdesc!
         itemPrice.text = ProductDetails.itemprice!.dollar()
         self.textQTY.text = "1"
+        self.navigationItem.title = "ProductDetails"
     }
     
 

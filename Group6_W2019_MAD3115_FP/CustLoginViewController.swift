@@ -19,8 +19,7 @@ class CustLoginViewController: UIViewController {
         super.viewDidLoad()
         Customer.customerSingleToneObj()
         UserDefaults().removeObject(forKey: "customer")
-        print("this is first page")
-        // Do any additional setup after loading the view.
+       
         
         CustUserId.becomeFirstResponder()
     }

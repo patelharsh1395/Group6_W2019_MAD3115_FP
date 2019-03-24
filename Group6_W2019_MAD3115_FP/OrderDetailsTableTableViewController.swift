@@ -13,7 +13,7 @@ class OrderDetailsTableTableViewController: UITableViewController {
     
     
    
-    //static var orderId : Int!
+    
     static var order : Orders!
      var custSession : String? = UserDefaults.standard.string(forKey: "customer")!
     var cust : Customer!
@@ -27,7 +27,7 @@ class OrderDetailsTableTableViewController: UITableViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-       
+       self.navigationItem.title = "OrderDetails"
        
     }
 
@@ -91,10 +91,13 @@ class OrderDetailsTableTableViewController: UITableViewController {
                                 
                             }
                     cell.BillingAmount.text = "Billing amount : \(total.roundedVal().dollar())"
+              
                     cell.shippingCharges.text =  "Shipping charges : \(Float(order!.shippingInfo.shippingType.rawValue).dollar())"
                      total += Float(order!.shippingInfo.shippingType.rawValue)
-                    cell.hstAMT.text = "HST 13% tax : \(Float((total+Float(order!.shippingInfo.shippingType.rawValue)*13)/100).roundedVal().dollar())"
+               
+                    cell.hstAMT.text = "HST 13% tax : \(Float((total*13)/100).roundedVal().dollar())"
                     total += (total*13)/100
+                 
                     cell.totalPayable.text = "final amount to be paid  : \(total.roundedVal().dollar()) "
                     return cell
                 }
