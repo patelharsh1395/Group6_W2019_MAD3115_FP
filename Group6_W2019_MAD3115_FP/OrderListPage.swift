@@ -11,7 +11,7 @@ import UIKit
 class OrderListPage: UIViewController , UITableViewDelegate , UITableViewDataSource {
    
     
-    var ord : [Orders]!
+  
     @IBOutlet weak var tableView: UITableView!
     var custSession : String? = UserDefaults.standard.string(forKey: "customer")!
     var cust : Customer!
@@ -37,23 +37,17 @@ class OrderListPage: UIViewController , UITableViewDelegate , UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.ord = []
-            
-        self.ord.append(contentsOf: self.cust.orders)
-        
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.ord.count
+        return self.cust.orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "OrdersCell", for: indexPath) as! OrdersCell
         cell.orderDate.text = "\(Date())"
         
-        let o = self.ord[indexPath.row]
+        let o = self.cust.orders[indexPath.row]
         cell.orderId.text = "Order : \(o.orderId!)"
         
         
@@ -89,6 +83,10 @@ class OrderListPage: UIViewController , UITableViewDelegate , UITableViewDataSou
        var sb = UIStoryboard(name: "Main", bundle: nil)
         var nv = sb.instantiateViewController(withIdentifier: "OrderDetailsTableTableViewController") as! OrderDetailsTableTableViewController
         self.navigationController?.pushViewController(nv, animated: true)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("inside did appear")
+        self.tableView.reloadData()
     }
     
 }

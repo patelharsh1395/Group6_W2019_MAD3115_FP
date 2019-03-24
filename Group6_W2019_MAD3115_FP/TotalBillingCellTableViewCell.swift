@@ -10,6 +10,10 @@ import UIKit
 
 class TotalBillingCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var totalPayable: UILabel!
+    @IBOutlet weak var shippingCharges: UILabel!
+    @IBOutlet weak var hstAMT: UILabel!
+    @IBOutlet weak var BillingAmount: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
