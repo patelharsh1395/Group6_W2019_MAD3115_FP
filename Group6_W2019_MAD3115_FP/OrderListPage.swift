@@ -54,7 +54,7 @@ class OrderListPage: UIViewController , UITableViewDelegate , UITableViewDataSou
         switch(o.getOrderStatus)
         {
         case .PROCESSING :
-            cell.orderStatus.text = "Order status : Processing"
+            cell.orderStatus.text = "OrderStatus : Processing"
         case .DELIVERED :
             cell.orderStatus.text = "Order status : delivered"
         case .OUTFORSHIPPING :
@@ -78,7 +78,9 @@ class OrderListPage: UIViewController , UITableViewDelegate , UITableViewDataSou
 //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        OrderDetailsTableTableViewController.orderId = indexPath.row
+      //  OrderDetailsTableTableViewController.orderId = indexPath.row
+        
+        OrderDetailsTableTableViewController.order = cust.orders[indexPath.row]
         print("inside .....")
        var sb = UIStoryboard(name: "Main", bundle: nil)
         var nv = sb.instantiateViewController(withIdentifier: "OrderDetailsTableTableViewController") as! OrderDetailsTableTableViewController
@@ -89,4 +91,5 @@ class OrderListPage: UIViewController , UITableViewDelegate , UITableViewDataSou
         self.tableView.reloadData()
     }
     
+
 }
