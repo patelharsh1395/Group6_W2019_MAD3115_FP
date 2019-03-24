@@ -51,8 +51,15 @@ class SignupPage: UIViewController {
                            
                             do{
                                 
-                                try Customer.register(customerName: self.Name.text!, address: self.address.text! , creaditCardInfo: Int(self.creditcard.text!)!  , userId: self.email.text! , password: self.password.text!, dob:  "\(datePicker.date)" )
-                                showAlert(title: "Success", message: "User is registered")
+                                if(self.password.text == self.reenter_pass.text)
+                                {
+                                    try Customer.register(customerName: self.Name.text!, address: self.address.text! , creaditCardInfo: Int(self.creditcard.text!)!  , userId: self.email.text! , password: self.password.text!, dob:  "\(datePicker.date)" )
+                                    showAlert(title: "Success", message: "User is registered")
+                                }
+                                else
+                                {
+                                    showAlert(title: "Invalid", message: "Password does not match")
+                                }
                             }
                             catch CustomError.INVALID(let p)
                             {

@@ -27,12 +27,13 @@ class CustLoginViewController: UIViewController {
 
     @IBAction func signInClick(_ sender: UIButton) {
           //  let userdef = UserDefaults.standard
-      
+       
         do
         {
             
             if let _ = try Customer.login(userid: CustUserId.text!, pass: CustPass.text!) ?? nil
             {
+                 self.navigationItem.backBarButtonItem?.title = "Logout"
                 UserDefaults().set(CustUserId.text, forKey: "customer")
                 self.performSegue(withIdentifier: "tabbarcont", sender: nil)
             }
