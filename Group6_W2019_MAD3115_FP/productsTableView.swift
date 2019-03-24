@@ -34,7 +34,7 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.logout()
-        self.hideBack()
+       // self.hideBack()
         
     }
     

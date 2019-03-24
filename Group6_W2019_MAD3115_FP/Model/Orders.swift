@@ -23,6 +23,18 @@ class Orders
             return orderStatus
         }
     }
+    var readItemsFromOrdersArr : [(String,Float)]!
+    {
+        get
+        {
+            var temp : [(String,Float)] = []
+            for i in orderItems
+            {
+                temp.append((i.key,i.value))
+            }
+            return temp
+        }
+    }
     var shippingInfo : ShippingInfo!
     
     
