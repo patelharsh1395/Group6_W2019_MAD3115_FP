@@ -52,7 +52,7 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-            var cell : CustomCell  = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! CustomCell
+            var cell : ProductCell  = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! ProductCell
             
             cell.itemNAME.text  = self.items[indexPath.row].0
             cell.itemMFG.text = ""

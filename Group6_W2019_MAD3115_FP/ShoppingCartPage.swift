@@ -136,8 +136,7 @@ class ShoppingCartPage: UIViewController , UITableViewDelegate , UITableViewData
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  {
         do
         {
-        
-        if(editingStyle == UITableViewCell.EditingStyle.delete)
+                if(editingStyle == UITableViewCell.EditingStyle.delete)
                 {
                     
                  try self.shoppingCart.removeItem(item: self.shoppingCart.readItemsFromCartArr[indexPath.row].0)
