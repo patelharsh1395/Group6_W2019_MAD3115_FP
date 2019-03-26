@@ -39,14 +39,10 @@ class productsTableView: UIViewController , UITableViewDataSource , UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(tableView.tag == 0)
-        {
+       
             return self.items.count
-        }
-        else
-        {
-            return self.shoppingCart.readItemFromCart.count
-        }
+        
+        
         
     }
     
